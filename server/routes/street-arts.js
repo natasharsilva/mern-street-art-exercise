@@ -15,9 +15,7 @@ router.get('/', (req, res, next) => {
 router.get('/:streetArtId', (req, res, next) => {
   StreetArt.findById(req.params.streetArtId)
   .then(streetArt => {
-    res.json({
-      success: true,
-      streetArt});
+    res.json(streetArt);
   })
   .catch(err => next(err))
 })

@@ -63,16 +63,23 @@ export default {
 
   // This is an example on how to use this method in a different file
   // api.getCountries().then(countries => { /* ... */ })
-  getCountries() {
+  getStreetArts() {
     return service
-      .get('/countries')
+      .get('/street-arts')
       .then(res => res.data)
       .catch(errHandler)
   },
 
-  addCountry(body) {
+  getStreetArt(streetArtId) {
     return service
-      .post('/countries', body)
+      .get(`/street-arts/${streetArtId}`)
+      .then(res => res.data)
+      .catch(errHandler)
+  },
+
+  addStreetArt(uploadData) {
+    return service
+      .post('/street-arts', uploadData)
       .then(res => res.data)
       .catch(errHandler)
   },

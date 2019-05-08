@@ -1,6 +1,9 @@
 // --------------------
+
 // Definition of variables
-$primary: #32c3ff;
+$primary: #892D32;
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/mapbox-gl/src/css/mapbox-gl.css';
 
 
 // ----------------------------------------
@@ -25,33 +28,28 @@ body {
   font-family: sans-serif;
 }
 
-.info {
-  margin: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: #5776e9;
-  color: white;
-}
+// .info {
+//   margin: 20px;
+//   padding: 10px 20px;
+//   border-radius: 10px;
+//   display: inline-block;
+//   background-color: #5776e9;
+//   color: white;
+// }
 
-.info.info-danger {
-  background-color: #e73f3f;
-}
+// .info.info-danger {
+//   background-color: #e73f3f;
+// }
 
 // --------------------
 // Style for App component
-.App {
-  text-align: center;
 
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
 
-  .App-header {
+  .MainNavbar {
     background-color: $primary;
-    padding: 20px;
+    padding: 15px;
     color: white;
+    display: flex;
 
     a {
       color: white;
@@ -64,30 +62,27 @@ body {
     }
   }
 
-  .App-title {
-    font-size: 1.5em;
+  .navbarTitle {
+    flex-grow: 1;
+    font-size: 1.2em;
   }
 
-  .App-intro {
-    font-size: large;
-  }
+  // .App-intro {
+  //   font-size: large;
+  // }
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
 
 // --------------------
 // Style for Home component
 .Home {
+  margin: 10px;
+
+  h2 {
+    text-align: center
+  }
   p {
     font-size: 1.2em;
+    text-align: center
   }
 }
 
@@ -97,5 +92,46 @@ body {
   .result {
     font-size: 1.2em;
     color: $primary;
+  }
+}
+
+// --------------------
+// Style for List component
+.List {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.List Table {
+  margin: 20px;
+  width: 90vh;
+  
+  // tr {
+  //   display: flex;
+  //   justify-content: space-evenly;
+  // }
+
+  // td {
+  //   align-self: baseline;
+  // }
+}
+
+.List img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.streetArtDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+
+  img {
+    margin: 10px;
+    height: 400px;
   }
 }
