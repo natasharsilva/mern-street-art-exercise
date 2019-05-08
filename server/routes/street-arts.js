@@ -27,7 +27,8 @@ router.get('/:streetArtId', (req, res, next) => {
 router.post('/', uploader.single('picture'), (req, res, next) => {
   let { lat, lng } = req.body
   let pictureUrl = req.file.url
-  StreetArt.create({ lat, lng, pictureUrl })
+  let location = {coordinates: [lat, lng]}
+  StreetArt.create({ location, pictureUrl })
     .then(streetArt => {
       res.json({
         success: true,
