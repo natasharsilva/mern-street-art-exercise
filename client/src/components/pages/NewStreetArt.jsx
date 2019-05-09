@@ -27,8 +27,8 @@ export default class NewStreetArt extends Component {
       navigator.geolocation.getCurrentPosition(position => {
         console.log("The current coords are", position.coords)
         this.setState({
-          lng: position.coords.longitude, // TODO: write the correct value
-          lat: position.coords.latitude // TODO: write the correct value
+          lng: position.coords.latitude, // TODO: write the correct value
+          lat: position.coords.longitude // TODO: write the correct value
         })
       })
     }
@@ -74,10 +74,10 @@ export default class NewStreetArt extends Component {
             <Label for="exampleEmail">Coordinates</Label>
           </Col>
           <Col>
-            <Input type="number" value={this.state.lng} onChange={this.handleInputChange} name="lng" placeholder="Longitude" />
+            <Input type="number" value={this.state.lng} onChange={this.handleInputChange} name="lng" placeholder="Latitude" />
           </Col>
           <Col>
-            <Input type="number" value={this.state.lat} onChange={this.handleInputChange} name="lat" placeholder="Latitude" />
+            <Input type="number" value={this.state.lat} onChange={this.handleInputChange} name="lat" placeholder="Longitude" />
           </Col>
         </Row>
 
