@@ -54,7 +54,7 @@ export default class NewStreetArt extends Component {
     api.addStreetArt(uploadData)
       .then(createdStreetArt => {
         // Redirect the user to another page
-        this.props.history.push('/list') // TODO
+        this.props.history.push(`/street-art-detail/${createdStreetArt.streetArt._id}`) // TODO
       })
       .catch(err => {
         console.log("Error while adding the street art: ", err)
